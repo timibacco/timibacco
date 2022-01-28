@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @timibacco
 - 👀 I’m interested in Python Django Backend, Blockchain with Python, Little Javascript
-- 🌱 I’m currently learning ...Django Framework
+- 🌱 I’m currently learning ...Django Framework, Smart Contracts
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ... foxxelit9@gmail.com, timibacco@twitter.com.
 
