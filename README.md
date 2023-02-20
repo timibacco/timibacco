@@ -17,7 +17,7 @@
       </a>
   
 </div>
-<div  align="center mt-2">
+<div  align="center">
 <img src="https://komarev.com/ghpvc/?username=timibacco&style=flat-circle&color=blue" alt=""/>
 </div>
 
