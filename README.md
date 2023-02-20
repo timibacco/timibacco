@@ -5,7 +5,7 @@
  
    
 </div>
-<div id="badges" align="center ">
+<div id="badges" align="center">
      <a href="https://timibacco.hashnode.dev/">
     <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=blue" alt="Hashnode Badge"/>
       </a>
