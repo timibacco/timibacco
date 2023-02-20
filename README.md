@@ -21,9 +21,12 @@
 <img src="https://komarev.com/ghpvc/?username=timibacco&style=flat-circle&color=blue" alt=""/>
 </div>
 
+<h1>
+  Hey there, I'm Me.
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
+</h1>
 
 
-- 👋 Hi, I’m @timibacco
 - 👀 I’m a Backend Developer(Python),Web3 developer, Linux Administrator and Technical writer.
 - 🌱 I’m currently interested in ...Django Framework, Smart Contracts
 - 💞️ I’m looking to collaborate on Django projects and Technical Writings.
