@@ -7,7 +7,7 @@
 </div>
 <div id="header" align="center">
      <a href="your-linkedin-URL">
-    <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=white" alt="LinkedIn Badge"/>
+    <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=black" alt="Hashnode Badge"/>
       </a>
      <a href="your-linkedin-URL">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
