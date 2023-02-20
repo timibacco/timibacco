@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
       </a>
      <a href="https://github.com/timibacco">
-    <img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github&logoColor=white" width = "100" height="20" alt="Github Badge"/>
+    <img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github&logoColor=white" width = "100" height="35" alt="Github Badge"/>
       </a>
   
 </div>
