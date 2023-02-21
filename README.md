@@ -57,13 +57,11 @@
 ---
 
 ### :fire: So Far :
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=timibacco&theme=dark&date_format=M%20j%5B%2C%20Y%5D&ring=F8D93890)](https://git.io/streak-stats)![](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=dark)
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=timibacco&theme=dark&date_format=M%20j%5B%2C%20Y%5D&ring=F8D93890)](https://git.io/streak-stats)
 
 
 ---
 
-### 👷‍♂️: Languages :
-[![Top Langs ](https://github-readme-stats.vercel.app/api/top-langs/?username=timibacco&layout=compact&langs_count=8&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 <!---
 timibacco/timibacco is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
