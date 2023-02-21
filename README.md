@@ -28,9 +28,9 @@
 
 
 - 👀 I’m a Backend Developer(Python),Web3 developer, Linux Administrator and Technical writer.
-- 🌱 I’m currently interested in ...Django Framework, Smart Contracts
-- 💞️ I’m looking to collaborate on Django projects and Technical Writings.
-- 📫 How to reach me ... <a href ="mailto:foxxelit9@gmail.com"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>, timibacco@twitter.com.
+- 🌱 I’m currently interested in ...Django Framework, Smart Contracts.
+- 💞️ I’m looking to collaborate on Django projects, Testing Smart contracts and Technical Writings.
+- 📫 How to reach me on mail... <a href ="mailto:foxxelit9@gmail.com"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>
 - My recent articles can be found on my Hashnode.
 
 
