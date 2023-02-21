@@ -21,7 +21,7 @@
 </div>
 
 <h1>
-  Hey there, I'm Me.
+  Hey there, I'm Timi.
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 
