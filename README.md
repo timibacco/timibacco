@@ -6,7 +6,7 @@
 </div>
 <div id="badges" align="center">
      <a href="https://timibacco.hashnode.dev/">
-    <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=blue" width = "150" height="30" alt="Hashnode Badge"/>
+    <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=dark" width = "150" height="30" alt="Hashnode Badge"/>
       </a>
      <a href="https://www.linkedin.com/in/timibacco/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" width = "150" height="30" alt="LinkedIn Badge"/>
