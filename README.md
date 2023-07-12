@@ -48,7 +48,7 @@ Projects
 Feel free to explore my repositories to get a closer look at my projects and contributions. I am always open to collaboration and eager to learn from others in the developer community.
 Contact Me
 
-     Email:  <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>
+  Email:  <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>
      LinkedIn: [ <a href="https://www.linkedin.com/in/timibacco/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" width = "150" height="30" alt="LinkedIn Badge"/>
       </a>]
