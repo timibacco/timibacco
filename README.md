@@ -49,12 +49,12 @@ Feel free to explore my repositories to get a closer look at my projects and con
 Contact Me
 
   Email:  <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>
-     LinkedIn: [ <a href="https://www.linkedin.com/in/timibacco/">
+     LinkedIn: <a href="https://www.linkedin.com/in/timibacco/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" width = "150" height="30" alt="LinkedIn Badge"/>
-      </a>]
-      Portfolio: [ <a href="https://github.com/timibacco">
+      </a>
+      Portfolio:  <a href="https://github.com/timibacco">
     <img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github&logoColor=white" width = "150" height="30" alt="Github Badge"/>
-      </a>]
+      </a>
 
 Let's connect and discuss exciting opportunities to work together or share knowledge. I am looking forward to engaging with fellow developers and making valuable contributions to the field of software development.
 
