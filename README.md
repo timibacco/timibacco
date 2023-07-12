@@ -8,12 +8,8 @@
      <a href="https://timibacco.hashnode.dev/">
     <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=dark" width = "150" height="30" alt="Hashnode Badge"/>
       </a>
-     <a href="https://www.linkedin.com/in/timibacco/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" width = "150" height="30" alt="LinkedIn Badge"/>
-      </a>
-     <a href="https://github.com/timibacco">
-    <img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github&logoColor=white" width = "150" height="30" alt="Github Badge"/>
-      </a>
+    
+    
   
 </div>
 <div  align="center">
@@ -21,7 +17,7 @@
 </div>
 
 <h1>
-  Hey there, I'm Timi.
+  HEY THERE, I'M ABAYOMI OLUWATIMILEHIN
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 
@@ -29,11 +25,49 @@
 - 👀 I’m a Backend Developer(Python),Web3 developer, Linux Administrator and Technical writer.
 - 🌱 I’m currently interested in ...Django Framework, Smart Contracts.
 - 💞️ I’m looking to collaborate on Django projects, Testing Smart contracts and Technical Writings.
-- 📫 How to reach me on ... <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>
+- 📫 How to reach me on ...
 - My recent articles can be found on my Hashnode.
 
 
 ---
+[Your Name]
+Computer Science Engineer | Backend Development | Linux Administration
+
+Welcome to my GitHub profile! I am a highly skilled Computer Science Engineer with expertise in Backend Development and Linux Administration. With a passion for technology and a commitment to delivering high-quality solutions, I strive to make a positive impact in the world of software development.
+Skills
+
+    Backend Development: I have a strong foundation in backend development, with proficiency in various programming languages such as Java, Python, and Ruby. I am experienced in developing scalable and efficient web applications using frameworks like Spring Boot and Django.
+
+    Database Management: I have a deep understanding of database systems, including SQL and NoSQL databases. I am proficient in designing and optimizing database schemas, writing complex queries, and ensuring data integrity.
+
+    API Design and Integration: I have expertise in designing and implementing RESTful APIs, ensuring seamless integration between different systems. I am experienced in utilizing tools like Swagger to document APIs and facilitate effective communication between development teams.
+
+    Linux Administration: I have a solid background in Linux system administration, including server configuration, deployment, and maintenance. I am skilled in shell scripting and automation, enabling efficient management of server environments.
+
+    Version Control: I am proficient in using Git for version control, ensuring smooth collaboration and efficient code management within development teams.
+
+Projects
+
+    E-VOTING SYSTEM: [AN ONLINE VOTING SYSTEM THAT PHYSICAL BALLOTING ISSUES. RELEVANT IN BANKS, SCHOOL, OFFICES]
+
+    FOOD ORDERING SYSTEM: [AN E-COMMERCE PLATFORM FOR FOODS AND DISHES ]
+
+   WINSHOP: [AN ONLINE WNDOW SHOPPING PLATFORM. THE SCROLLING EFFECT ACTUALIZATION]
+
+Feel free to explore my repositories to get a closer look at my projects and contributions. I am always open to collaboration and eager to learn from others in the developer community.
+Contact Me
+
+    Email: [ <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>]
+    LinkedIn: [ <a href="https://www.linkedin.com/in/timibacco/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" width = "150" height="30" alt="LinkedIn Badge"/>
+      </a>]
+    Portfolio: [ <a href="https://github.com/timibacco">
+    <img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github&logoColor=white" width = "150" height="30" alt="Github Badge"/>
+      </a>]
+
+Let's connect and discuss exciting opportunities to work together or share knowledge. I am looking forward to engaging with fellow developers and making valuable contributions to the field of software development.
+
+Thank you for visiting my profile!
 
 ### :hammer_and_wrench: Languages and Tools :
 <div>
