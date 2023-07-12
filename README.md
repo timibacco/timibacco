@@ -22,15 +22,6 @@
 </h1>
 
 
-- 👀 I’m a Backend Developer(Python),Web3 developer, Linux Administrator and Technical writer.
-- 🌱 I’m currently interested in ...Django Framework, Smart Contracts.
-- 💞️ I’m looking to collaborate on Django projects, Testing Smart contracts and Technical Writings.
-- 📫 How to reach me on ...
-- My recent articles can be found on my Hashnode.
-
-
----
-[Your Name]
 Computer Science Engineer | Backend Development | Linux Administration
 
 Welcome to my GitHub profile! I am a highly skilled Computer Science Engineer with expertise in Backend Development and Linux Administration. With a passion for technology and a commitment to delivering high-quality solutions, I strive to make a positive impact in the world of software development.
@@ -52,16 +43,16 @@ Projects
 
     FOOD ORDERING SYSTEM: [AN E-COMMERCE PLATFORM FOR FOODS AND DISHES ]
 
-   WINSHOP: [AN ONLINE WNDOW SHOPPING PLATFORM. THE SCROLLING EFFECT ACTUALIZATION]
+    WINSHOP: [AN ONLINE WNDOW SHOPPING PLATFORM. THE SCROLLING EFFECT ACTUALIZATION]
 
 Feel free to explore my repositories to get a closer look at my projects and contributions. I am always open to collaboration and eager to learn from others in the developer community.
 Contact Me
 
-    Email: [ <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>]
-    LinkedIn: [ <a href="https://www.linkedin.com/in/timibacco/">
+     Email:  <a href ="mailto:foxxelit9@gmail.com" width="30px"> ![Gmail](https://img.shields.io/badge/foxxelit9@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white) </a>
+     LinkedIn: [ <a href="https://www.linkedin.com/in/timibacco/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" width = "150" height="30" alt="LinkedIn Badge"/>
       </a>]
-    Portfolio: [ <a href="https://github.com/timibacco">
+      Portfolio: [ <a href="https://github.com/timibacco">
     <img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github&logoColor=white" width = "150" height="30" alt="Github Badge"/>
       </a>]
 
