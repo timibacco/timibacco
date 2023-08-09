@@ -24,10 +24,12 @@
 
 Computer Science Engineer | Backend Development | Linux Administration
 
-Welcome to my GitHub profile! I am a highly skilled Computer Science Engineer with expertise in Backend Development and Linux Administration. With a passion for technology and a commitment to delivering high-quality solutions, I strive to make a positive impact in the world of software development.
+Welcome to my GitHub profile! I am a highly skilled Computer Science Engineer with expertise in Python Backend Development and Linux Administration. With a passion for technology and a commitment to delivering high-quality solutions, I persist in making a positive impact in the world of software development. Design and write state-of-the-art software, follow best practices, measure everything and be responsible for deployment to production.
 Skills
 
     Backend Development: I have a strong foundation in backend development, with proficiency in various programming languages such as Java, Python, and Ruby. I am experienced in developing scalable and efficient web applications using frameworks like Spring Boot and Django.
+
+    Hardware Engineering: I have competent and confident experience in buidling world class projects using word class tools including but not limited to C++, Java, Verilog, VHDL.
 
     Database Management: I have a deep understanding of database systems, including SQL and NoSQL databases. I am proficient in designing and optimizing database schemas, writing complex queries, and ensuring data integrity.
 
