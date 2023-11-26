@@ -1,7 +1,7 @@
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/>
   <img src="https://media.giphy.com/media/fAcQ7d1Hnx2XlY6SMe/giphy.gif" width="200"/>
- 
+ z
    
 </div>
 <div id="badges" align="center">
@@ -21,7 +21,7 @@
 
 <!--![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)-->
 <!--
-<p align="center">
+<p align="left">
   
 ![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
   ![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
@@ -31,8 +31,8 @@
 
 <!-- Repo info cards - https://github.com/timibacco/github-readme-stats -->
 <!-- Small repo cards (fork) - https://github.com/DenverCoder1/github-readme-stats -->
-<!-- <p align="center">
- <a href="https://github.com/gurkanucar/socketio-simple-chat"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=socketio-simple-chat&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="socketio-simple-chat"></a><a href="https://github.com/gurkanucar/post-sharing-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=post-sharing-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="post-sharing-be"></a><a href="https://github.com/gurkanucar/mp3-player-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=mp3-player-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="mp3-player-be"></a>
+<!-- <p align="left">
+ <a href="https://github.com/gurkanucar/socketio-simple-chat"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=socketio-simple-chat&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="socketio-simple-chat"></a><a href="https://github.com/timibacco/post-sharing-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=post-sharing-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="post-sharing-be"></a><a href="https://github.com/gurkanucar/mp3-player-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=mp3-player-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="mp3-player-be"></a>
   
      -->
   
@@ -48,14 +48,13 @@
 ## Technology Stack
 
 <!-- https://github.com/tandpfun/skill-icons -->
-<div align="center">
+<div align="left">
 
-[![My Skills](https://skillicons.dev/icons?i=java,kotlin,spring,react,mysql,mongodb,postgres,docker,redis,rabbitmq,kafka,python,django)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,spring,springboot,python,django,react,mysql,mongodb,postgres,docker,redis,rabbitmq,kafka,)](https://skillicons.dev)
 
 </div>
   
 
-Let's connect and discuss exciting opportunities to work together or share knowledge. I am looking forward to engaging with fellow developers and making valuable contributions to the field of software development.
 
 Thank you for visiting my profile!
 
