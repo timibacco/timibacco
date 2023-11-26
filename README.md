@@ -10,22 +10,9 @@
       </a>
     
     
-  
-</div>
-<div  align="center">
-<img src="https://komarev.com/ghpvc/?username=timibacco&style=flat-circle&color=blue" alt=""/>
-</div>
-
-<h1>
-  HEY THERE, I'M ABAYOMI OLUWATIMILEHIN
-  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
-</h1>
 
 
-Computer Science Engineer | Backend Development | Linux Administration
 
-Welcome to my GitHub profile! I am a highly skilled Computer Science Engineer with expertise in Python Backend Development and Linux Administration. With a passion for technology and a commitment to delivering high-quality solutions, I persist in making a positive impact in the world of software development. Design and write state-of-the-art software, follow best practices, measure everything and be responsible for deployment to production.
-Skills
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4600&pause=2500&color=FFC43D&width=435&lines=Hi+there%2C+This+is+Timi+%F0%9F%91%8B" alt="Typing SVG" /></a>
 
@@ -45,7 +32,7 @@ Skills
 <!-- Repo info cards - https://github.com/timibacco/github-readme-stats -->
 <!-- Small repo cards (fork) - https://github.com/DenverCoder1/github-readme-stats -->
 <!-- <p align="center">
- <a href="https://github.com/gurkanucar/socketio-simple-chat"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=socketio-simple-chat&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="socketio-simple-chat"></a><a href="https://github.com/gurkanucar/post-sharing-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=post-sharing-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="post-sharing-be"></a><a href="https://github.com/gurkanucar/mp3-player-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=mp3-player-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="mp3-player-be"></a>
+ <a href="https://github.com/gurkanucar/socketio-simple-chat"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=socketio-simple-chat&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="socketio-simple-chat"></a><a href="https://github.com/gurkanucar/post-sharing-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=post-sharing-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="post-sharing-be"></a><a href="https://github.com/gurkanucar/mp3-player-be"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=gurkanucar&repo=mp3-player-be&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=false" alt="mp3-player-be"></a>
   
      -->
   
