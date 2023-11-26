@@ -1,10 +1,15 @@
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/>
+  
+  
   <img src="https://media.giphy.com/media/fAcQ7d1Hnx2XlY6SMe/giphy.gif" width="200"/>
 
 
    
 </div>
+
+
+
 <div id="badges" align="center">
      <a href="https://timibacco.hashnode.dev/">
     <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=dark" width = "150" height="30" alt="Hashnode Badge"/>
