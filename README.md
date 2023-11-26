@@ -22,7 +22,7 @@
 
 <!--![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)-->
 <!--
-<p align="left">
+<p align="center">
   
 ![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
   ![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
@@ -33,7 +33,7 @@
   
   
   
-<p align="left">
+<p align="center">
   <a href="https://github.com/timibacco?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://custom-icon-badges.herokuapp.com/badge/-All%20Repos-FFC43D?style=for-the-badge&logoColor=white&logo=repo"/></a>
 </p>
 
@@ -41,7 +41,7 @@
 ## Technology Stack
 
 <!-- https://github.com/tandpfun/skill-icons -->
-<div align="left">
+<div align="center">
 
 [![My Skills](https://skillicons.dev/icons?i=java,spring,python,django,fastapi,react,mysql,mongodb,postgres,docker,redis,rabbitmq,kafka,)](https://skillicons.dev)
 
