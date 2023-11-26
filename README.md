@@ -27,12 +27,12 @@ Computer Science Engineer | Backend Development | Linux Administration
 Welcome to my GitHub profile! I am a highly skilled Computer Science Engineer with expertise in Python Backend Development and Linux Administration. With a passion for technology and a commitment to delivering high-quality solutions, I persist in making a positive impact in the world of software development. Design and write state-of-the-art software, follow best practices, measure everything and be responsible for deployment to production.
 Skills
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4600&pause=2500&color=FFC43D&width=435&lines=Hi+there%2C+This+is+Gurkan+%F0%9F%91%8B" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4600&pause=2500&color=FFC43D&width=435&lines=Hi+there%2C+This+is+Timi+%F0%9F%91%8B" alt="Typing SVG" /></a>
 
 ![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true)
 
 
-<!--![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)-->
+<!--![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)-->
 <!--
 <p align="center">
   
