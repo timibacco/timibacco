@@ -1,12 +1,5 @@
-<div id="header" align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="200"/>
-  
-  
-  <img src="https://media.giphy.com/media/fAcQ7d1Hnx2XlY6SMe/giphy.gif" width="200"/>
+![twitterGDYa1usaoAAG6zM](https://github.com/timibacco/timibacco/assets/48661125/5d5a893c-4e34-49e8-bd94-fc2c7fc18a0d)
 
-
-   
-</div>
 
 
 
@@ -23,7 +16,7 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4600&pause=2500&color=FFC43D&width=435&lines=Hi+there%2C+This+is+Timi+%F0%9F%91%8B" alt="Typing SVG" /></a>
 
-![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
+<!--![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
 
 <!--![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)-->
 <!--
