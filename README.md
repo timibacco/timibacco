@@ -1,4 +1,3 @@
-![twitterGDYa1usaoAAG6zM](https://github.com/timibacco/timibacco/assets/48661125/5d5a893c-4e34-49e8-bd94-fc2c7fc18a0d)
 
 
 
