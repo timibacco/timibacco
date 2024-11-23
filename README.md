@@ -18,14 +18,10 @@
 ![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
 
 
-<p align="center">
   
-![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
-  ![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
 
 
 
-<a href="URL"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=REPO&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=true" alt=""></a>
 
 # 🚀 Backend Developer Portfolio
 
