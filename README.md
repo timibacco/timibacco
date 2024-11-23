@@ -15,10 +15,10 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4600&pause=2500&color=FFC43D&width=435&lines=Hi+there%2C+This+is+Timi+%F0%9F%91%8B" alt="Typing SVG" /></a>
 
-<!--![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
+![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
 
-<!--![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)-->
-<!--
+![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+
 <p align="center">
   
 ![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=timibacco&repo=github-readme-stats&theme=gruvbox)
@@ -26,7 +26,8 @@
 
 
 
-<!--  <a href="URL"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=REPO&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=true" alt=""></a>  -->
+<a href="URL"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=REPO&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=true" alt=""></a>
+
 # 🚀 Backend Developer Portfolio
 
 Hi! I'm a **Backend Engineer** with expertise in **Java** and **Python** ecosystems. I build scalable, efficient, and maintainable backend systems using industry-standard frameworks and tools.
