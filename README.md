@@ -17,7 +17,6 @@
 
 ![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
 
-![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
 
 <p align="center">
   
@@ -72,16 +71,15 @@ Hi! I'm a **Backend Engineer** with expertise in **Java** and **Python** ecosyst
 
 ## 📈 GitHub Stats
 
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&layout=compact&theme=radical)
+![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=timibacco&layout=compact&theme=radical)
 
 ---
 
 ## 📬 Get in Touch
 
-- **Email**: [YourEmail@example.com](mailto:YourEmail@example.com)  
-- **LinkedIn**: [YourLinkedIn](#)  
-- **Portfolio**: [YourPortfolio](#)
+- **Email**: [abayomioluwatimilehinstephen@gmail.com](mailto:abayomioluwatimilehinstephen@gmail.com)  
+- **LinkedIn**: [LinkedIn](#)  
 
 ---
 
