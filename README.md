@@ -27,6 +27,65 @@
 
 
 <!--  <a href="URL"><img width="272" height="135" src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=timibacco&repo=REPO&theme=react&bg_color=00000f&title_color=007bff&icon_color=F8D866&hide_border=true&show_icons=true" alt=""></a>  -->
+# 🚀 Backend Developer Portfolio
+
+Hi! I'm a **Backend Engineer** with expertise in **Java** and **Python** ecosystems. I build scalable, efficient, and maintainable backend systems using industry-standard frameworks and tools.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Java & Spring Framework**
+- **Spring Boot**: Microservices architecture, RESTful APIs, and robust backend systems.
+- **OpenFeignClient**: Simplified HTTP client creation for microservices.
+- Other tools: Spring Security, Spring Data JPA, etc.
+
+### **Python Frameworks**
+- **Django**: Full-stack development with an emphasis on backend logic.
+- **FastAPI**: High-performance APIs.
+- **Flask**: Lightweight web applications.
+
+### **Other Skills**
+- API integration and development.
+- Database management: PostgreSQL, MySQL, MongoDB.
+- Proficient in version control (Git) and CI/CD pipelines.
+- Containerization and orchestration (Docker, Kubernetes).
+
+---
+
+## 🌟 Highlight Projects
+
+### [Project 1: **Workspace Rental & Gadget Sales App**](#)
+**Tech Stack**: Django, HTML, CSS, PostgreSQL  
+**Description**: A hybrid app allowing users to rent workspaces and purchase gadgets, featuring a user-friendly interface and secure payment gateway integration.  
+
+### [Project 2: **Microservice-based E-commerce Backend**](#)
+**Tech Stack**: Java, Spring Boot, OpenFeignClient, Kafka  
+**Description**: A robust backend for an e-commerce platform with microservices for product catalog, order management, and user authentication.
+
+### [Project 3: **High-performance REST API**](#)
+**Tech Stack**: FastAPI, Redis, PostgreSQL  
+**Description**: Designed and implemented a RESTful API with low latency for a real-time analytics system.
+
+---
+
+## 📈 GitHub Stats
+
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=radical)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&layout=compact&theme=radical)
+
+---
+
+## 📬 Get in Touch
+
+- **Email**: [YourEmail@example.com](mailto:YourEmail@example.com)  
+- **LinkedIn**: [YourLinkedIn](#)  
+- **Portfolio**: [YourPortfolio](#)
+
+---
+
+### ✨ *Let’s build something amazing together!* ✨
+
   
   
   
