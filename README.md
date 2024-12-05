@@ -51,15 +51,19 @@ Hi! I'm a **Backend Engineer** with expertise in **Java** and **Python** ecosyst
 
 ## 🌟 Highlight Projects
 
-### [Project 1: **Workspace Rental & Gadget Sales App**](#)
-**Tech Stack**: Django, HTML, CSS, PostgreSQL  
-**Description**: A hybrid app allowing users to rent workspaces and purchase gadgets, featuring a user-friendly interface and secure payment gateway integration.  
+### [Project 1: **MY COMPILER: A SIMPLE JAVA COMPILER**](https://github.com/timibacco/mycompiler)
+**Tech Stack**: JAVA, IntellijIDE
+**Description**: An implementation of a Java compiler, in Java, that generates intermediate code. No optimization.
 
-### [Project 2: **Microservice-based E-commerce Backend**](#)
+### [Project 2: **Workspace Rental & Gadget Sales App**](#)
+**Tech Stack**: Django, HTML, CSS, PostgreSQL  (private)
+**Description**: A hybrid app  allowing users to rent workspaces and purchase gadgets, featuring a user-friendly interface and secure payment gateway integration.  
+
+### [Project 3: **A Real-TIme Trading Platform with ML featured=s.**](https://github.com/timibacco/algocoin)
 **Tech Stack**: Java, Spring Boot, OpenFeignClient, Kafka  
-**Description**: A robust backend for an e-commerce platform with microservices for product catalog, order management, and user authentication.
+**Description**: A robust brokage and crypto trading platform, featuring ML Algorithms to hedge against the market, fostering seamless and smooth trading experience with AI.
 
-### [Project 3: **High-performance REST API**](#)
+### [Project 4: **High-performance REST API**](#)
 **Tech Stack**: FastAPI, Redis, PostgreSQL  
 **Description**: Designed and implemented a RESTful API with low latency for a real-time analytics system.
 
