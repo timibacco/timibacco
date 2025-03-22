@@ -33,63 +33,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animate skill bars when in viewport
     const skillLevels = document.querySelectorAll('.skill-level');
     const observerOptions = {
-        threshold: 0.5,
+        threshold: 0.2,
         rootMargin: '0px 0px -100px 0px'
     };
     
-    const skillObserver = new IntersectionObserver((entries, observer) => {
+    const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const skillBar = entry.target;
                 const width = skillBar.style.width;
-                // Initially set width to 0
-                skillBar.style.width = '0';
-                // Force reflow
-                void skillBar.offsetWidth;
-                // Set the actual width to animate to
                 skillBar.style.width = width;
-                observer.unobserve(skillBar);
             }
         });
     }, observerOptions);
     
     skillLevels.forEach(skill => {
+        // Set initial width to the actual width value but with 0 opacity
+        // This allows the animation to work properly every time it's in view
+        skill.style.opacity = '1';
         skillObserver.observe(skill);
     });
     
     // Fade-in animations for sections
-    const faders = document.querySelectorAll('.fade-in');
-    const scalers = document.querySelectorAll('.scale-in');
-    
-    // Add animation classes to elements
+    // Pre-apply the animation classes to elements that need them
     document.querySelectorAll('.section-title').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.project-card').forEach(el => el.classList.add('scale-in'));
     document.querySelectorAll('.skills-category').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.about-image, .about-text').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.contact-item').forEach(el => el.classList.add('fade-in'));
+    document.querySelectorAll('.icon-container').forEach(el => el.classList.add('scale-in'));
+    
+    // Get all elements that need animation
+    const animatedElements = document.querySelectorAll('.fade-in, .scale-in');
     
     const appearOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -100px 0px"
     };
     
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    // Modified intersection observer that toggles the 'appear' class
+    // when elements enter or exit the viewport
+    const appearOnScroll = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
+            // Add 'appear' class when element enters viewport
+            // Remove it when element exits viewport
+            if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-                appearOnScroll.unobserve(entry.target);
+            } else {
+                // Uncomment the line below ONLY if you want elements to reset when scrolled out of view
+                // entry.target.classList.remove('appear');
             }
         });
     }, appearOptions);
     
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-    
-    scalers.forEach(scaler => {
-        appearOnScroll.observe(scaler);
+    // Observe all animated elements
+    animatedElements.forEach(element => {
+        appearOnScroll.observe(element);
     });
     
     // Contact form submission
@@ -118,26 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     formMessage.style.display = 'none';
                 }, 5000);
             }, 1000);
-            
-            // In a real implementation, you would send the data to your backend here
-            // Example:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(formData),
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     formMessage.textContent = 'Thanks for your message! I\'ll get back to you soon.';
-            //     formMessage.className = 'success';
-            //     contactForm.reset();
-            // })
-            // .catch((error) => {
-            //     formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
-            //     formMessage.className = 'error';
-            // });
         });
     }
     
@@ -151,14 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
         });
-    });
-    
-    // Tech stack icons animation
-    const techIcons = document.querySelectorAll('.icon-container');
-    techIcons.forEach((icon, index) => {
-        icon.style.animationDelay = `${index * 0.1}s`;
-        icon.classList.add('scale-in');
-        appearOnScroll.observe(icon);
     });
     
     // Smooth scrolling for anchor links
