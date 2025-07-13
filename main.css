@@ -391,8 +391,8 @@ nav {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-color), var(--highlight));
     border-radius: 4px;
-    width: 0;
     transition: width 1.5s ease-in-out;
+    will-change: width;
 }
 
 .tech-icons {
@@ -609,6 +609,310 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
+/* Swiper Carousel Styles */
+.swiper {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/* Project SVG Icons */
+.project-svg {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(108, 99, 255, 0.1) 100%);
+}
+
+.project-svg svg {
+    width: 80px;
+    height: 80px;
+    fill: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-svg svg {
+    transform: scale(1.2);
+}
+
+/* Hero Section Enhancements */
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 120px;
+}
+
+.stat-item .number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    font-family: var(--font-code);
+}
+
+.stat-item .label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.code-window {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+    font-family: var(--font-code);
+    position: relative;
+    overflow: hidden;
+}
+
+.code-window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: var(--border-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.code-window::after {
+    content: '○ ○ ○';
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    color: var(--text-color);
+    font-size: 12px;
+    z-index: 1;
+}
+
+.code-content {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.code-line {
+    margin-bottom: 0.5rem;
+}
+
+.code-comment {
+    color: #6a9955;
+}
+
+.code-keyword {
+    color: #569cd6;
+}
+
+.code-string {
+    color: #ce9178;
+}
+
+/* About Section Expertise Cards */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.expertise-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.expertise-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.expertise-card h4 {
+    margin-bottom: 0.5rem;
+    color: var(--highlight);
+}
+
+.expertise-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Enhanced Footer */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(108, 99, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Animation Classes - Modified */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.scale-in.appear {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Skill level animation - add this to ensure skill bars animate properly */
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--highlight));
+    border-radius: 4px;
+    transition: width 1.5s ease-in-out;
+    will-change: width;
+}
+
+/* Typing animation */
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
     h1 {
@@ -723,56 +1027,41 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+    
+    .swiper {
+        height: 180px;
+    }
+    
+    .swiper-slide img {
+        height: 180px;
+    }
+    
+    .project-svg {
+        height: 150px;
+    }
+    
+    .project-svg svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .code-window {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
 }
 
-/* Animation Classes - Modified */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    will-change: opacity, transform;
-}
-
-.fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.scale-in {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    will-change: opacity, transform;
-}
-
-.scale-in.appear {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Skill level animation - add this to ensure skill bars animate properly */
-.skill-level {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--highlight));
-    border-radius: 4px;
-    transition: width 1.5s ease-in-out;
-    will-change: width;
-}
-
-/* Typing animation */
-.typing-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid var(--primary-color);
-    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--primary-color) }
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating,
+    .pulse,
+    .typing-text {
+        animation: none;
+    }
 }

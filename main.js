@@ -26,9 +26,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Initialize Swiper carousels
+    if (typeof Swiper !== 'undefined') {
+        // WealthAlgo carousel
+        const wealthAlgoSwiper = new Swiper('.wealthalgo-carousel', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            speed: 600,
+        });
+        
+        // ProductifiSync carousel
+        const productifiSyncSwiper = new Swiper('.productifisync-carousel', {
+            loop: true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            speed: 600,
+        });
+    }
+    
     // Typing animation for hero section
     const typingContainer = document.querySelector('.typing-container h1');
-    typingContainer.classList.add('typing-text');
+    if (typingContainer) {
+        typingContainer.classList.add('typing-text');
+    }
     
     // Animate skill bars when in viewport
     const skillLevels = document.querySelectorAll('.skill-level');
@@ -41,27 +84,55 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const skillBar = entry.target;
-                const width = skillBar.style.width;
-                skillBar.style.width = width;
+                const targetWidth = skillBar.getAttribute('data-width') || '90%';
+                skillBar.style.width = targetWidth;
             }
         });
     }, observerOptions);
     
     skillLevels.forEach(skill => {
-        // Set initial width to the actual width value but with 0 opacity
-        // This allows the animation to work properly every time it's in view
-        skill.style.opacity = '1';
         skillObserver.observe(skill);
     });
     
+    // Hero stats counter animation
+    const animateCounter = (element, target, duration = 2000) => {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                element.textContent = target + (element.dataset.suffix || '');
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(start) + (element.dataset.suffix || '');
+            }
+        }, 16);
+    };
+    
+    // Observe hero stats for counter animation
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const number = entry.target.querySelector('.number');
+                const target = parseInt(number.dataset.target);
+                animateCounter(number, target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('.stat-item').forEach(stat => {
+        statsObserver.observe(stat);
+    });
+    
     // Fade-in animations for sections
-    // Pre-apply the animation classes to elements that need them
     document.querySelectorAll('.section-title').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.project-card').forEach(el => el.classList.add('scale-in'));
     document.querySelectorAll('.skills-category').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.about-image, .about-text').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.contact-item').forEach(el => el.classList.add('fade-in'));
     document.querySelectorAll('.icon-container').forEach(el => el.classList.add('scale-in'));
+    document.querySelectorAll('.expertise-card').forEach(el => el.classList.add('scale-in'));
     
     // Get all elements that need animation
     const animatedElements = document.querySelectorAll('.fade-in, .scale-in');
@@ -71,17 +142,10 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: "0px 0px -100px 0px"
     };
     
-    // Modified intersection observer that toggles the 'appear' class
-    // when elements enter or exit the viewport
     const appearOnScroll = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-            // Add 'appear' class when element enters viewport
-            // Remove it when element exits viewport
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-            } else {
-                // Uncomment the line below ONLY if you want elements to reset when scrolled out of view
-                // entry.target.classList.remove('appear');
             }
         });
     }, appearOptions);
@@ -91,13 +155,20 @@ document.addEventListener('DOMContentLoaded', function() {
         appearOnScroll.observe(element);
     });
     
-    // Contact form submission
+    // Contact form submission with loading state
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('.btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+            submitBtn.classList.add('disabled');
             
             // Get form data
             const formData = {
@@ -113,22 +184,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 formMessage.className = 'success';
                 contactForm.reset();
                 
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.classList.remove('disabled');
+                
                 setTimeout(() => {
                     formMessage.style.display = 'none';
                 }, 5000);
-            }, 1000);
+            }, 2000);
         });
     }
     
-    // Project card hover effects
+    // Enhanced project card interactions
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
+        // Add floating animation to some cards
+        if (Math.random() > 0.5) {
+            card.classList.add('floating');
+        }
+        
         card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px)';
+            card.style.transform = 'translateY(-10px) scale(1.02)';
         });
         
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
+            card.style.transform = 'translateY(0) scale(1)';
         });
     });
     
@@ -153,17 +233,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Create space stars dynamically
+    // Parallax effect for hero section
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('.hero');
+        if (parallax) {
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        }
+    });
+    
+    // Add pulse animation to important elements
+    setTimeout(() => {
+        document.querySelectorAll('.btn').forEach(btn => {
+            if (btn.textContent.includes('Hire') || btn.textContent.includes('Contact')) {
+                btn.classList.add('pulse');
+            }
+        });
+    }, 3000);
+    
+    // Create enhanced space stars
     function createStars() {
         const starsContainer = document.querySelector('.stars');
-        const numStars = 100;
+        if (!starsContainer) return;
+        
+        const numStars = 150;
         
         for (let i = 0; i < numStars; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
             star.style.top = `${Math.random() * 100}%`;
             star.style.left = `${Math.random() * 100}%`;
-            star.style.width = `${Math.random() * 2 + 1}px`;
+            star.style.width = `${Math.random() * 3 + 1}px`;
             star.style.height = star.style.width;
             star.style.animationDuration = `${Math.random() * 10 + 5}s`;
             star.style.animationDelay = `${Math.random() * 5}s`;
@@ -172,8 +273,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initialize stars
+    // Initialize enhanced features
     createStars();
+    
+    // Add keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+    
+    // Preload carousel images for better performance
+    const carouselImages = document.querySelectorAll('.swiper img');
+    carouselImages.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src) {
+            const preloadImg = new Image();
+            preloadImg.src = src;
+        }
+    });
 });
 
 // Add CSS for dynamic stars
