@@ -4,81 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timi Abayomi | Full-Stack Software Engineer</title>
-    <meta name="description" content="Full-Stack Software Engineer specializing in React frontend and Java backend development. Building scalable, efficient systems for fintech and productivity applications.">
-    <link rel="stylesheet" href="main.css">
+    <meta name="description" content="Abayomi is a Full-Stack Software Engineer specializing in React frontend and Java backend development. Building scalable, efficient systems for fintech and productivity applications.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Swiper CSS for carousels -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        code, .code-window { font-family: 'Fira Code', monospace; }
+        .stars, .twinkling { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .stars { background: #000; background-image: radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 1px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 1px), radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 100px 100px, 150px 150px, 200px 200px; background-position: 0 0, 30px 60px, 70px 20px; }
+        .twinkling { background: transparent; background-image: radial-gradient(white, rgba(255,255,255,.3) 1px, transparent 1px); background-size: 50px 50px; animation: move-twink-back 200s linear infinite; }
+        @keyframes move-twink-back { from { background-position: 0 0; } to { background-position: -10000px 5000px; } }
+        .skill-bar { background: #e5e7eb; height: 6px; border-radius: 3px; overflow: hidden; }
+        .skill-level { background: #3b82f6; height: 100%; transition: width 1s ease-in-out; }
+        .code-window { background: #1e293b; padding: 1rem; border-radius: 8px; color: #fff; }
+        .window-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .window-buttons span { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+        .btn-close { background: #ff5f56; }
+        .btn-minimize { background: #ffbd2e; }
+        .btn-maximize { background: #27c93f; }
+        .keyword { color: #569cd6; }
+        .type { color: #4ec9b0; }
+        .string { color: #ce9178; }
+        .class-name { color: #9cdcfe; }
+        .scroll-arrow { animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+        .project-card img { max-height: 300px; object-fit: cover; width: 100%; }
+        .availability-status .status-indicator { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+        .status-indicator.available { background: #22c55e; }
+        /* Carousel Styles */
+        .carousel { position: relative; overflow: hidden; width: 100%; }
+        .carousel-inner { display: flex; width: 500%; animation: slide 25s infinite ease-in-out; }
+        .carousel-item { flex: 0 0 20%; width: 20%; }
+        .carousel-item img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; opacity: 0; animation: fade 25s infinite ease-in-out; }
+        .carousel-item:nth-child(1) img { animation-delay: 0s; }
+        .carousel-item:nth-child(2) img { animation-delay: 5s; }
+        .carousel-item:nth-child(3) img { animation-delay: 10s; }
+        .carousel-item:nth-child(4) img { animation-delay: 15s; }
+        .carousel-item:nth-child(5) img { animation-delay: 20s; }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            16% { transform: translateX(0); }
+            20% { transform: translateX(-20%); }
+            36% { transform: translateX(-20%); }
+            40% { transform: translateX(-40%); }
+            56% { transform: translateX(-40%); }
+            60% { transform: translateX(-60%); }
+            76% { transform: translateX(-60%); }
+            80% { transform: translateX(-80%); }
+            96% { transform: translateX(-80%); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes fade {
+            0% { opacity: 0; }
+            4% { opacity: 1; }
+            20% { opacity: 1; }
+            24% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-900 text-white">
     <div class="stars"></div>
     <div class="twinkling"></div>
     
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <i class="fas fa-code"></i>
-                    <span>Timi Abayomi</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-                    <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="https://timibacco.github.io/papers/Algorithmic Trading Deconstructed _ Linguistic Redundancy and Technical Nuance in Modern Finance.pdf" 
-                            target="_blank" class="paper-link"><i class="fas fa-file-pdf"></i> Latest Paper</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+    <header class="py-6 bg-gray-800/50 backdrop-blur-sm fixed w-full z-20">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="logo flex items-center gap-2">
+                <i class="fas fa-code text-blue-500"></i>
+                <span class="text-xl font-bold">Timi Abayomi</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-500 flex items-center gap-2"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class="hover:text-blue-500 flex items-center gap-2"><i class="fas fa-user"></i> About</a>
+                <a href="#skills" class="hover:text-blue-500 flex items-center gap-2"><i class="fas fa-cogs"></i> Skills</a>
+                <a href="#projects" class="hover:text-blue-500 flex items-center gap-2"><i class="fas fa-laptop-code"></i> Projects</a>
+                <a href="#contact" class="hover:text-blue-500 flex items-center gap-2"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="https://timibacco.github.io/papers/Algorithmic Trading Deconstructed _ Linguistic Redundancy and Technical Nuance in Modern Finance.pdf" 
+                   target="_blank" class="hover:text-blue-500 flex items-center gap-2"><i class="fas fa-file-pdf"></i> Latest Paper</a>
             </nav>
+            <div class="hamburger md:hidden cursor-pointer space-y-1" hx-get="/nav-menu" hx-target="#mobile-nav" hx-swap="outerHTML">
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+                <span class="block w-6 h-0.5 bg-white"></span>
+            </div>
+            <div id="mobile-nav"></div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="typing-container">
-                        <h1>Hi there, I'm <span class="highlight">Timi</span> 👋</h1>
-                    </div>
-                    <h2 class="hero-title">Full-Stack Software Engineer</h2>
-                    <p class="hero-subtitle">Specializing in <strong>React</strong> frontend and <strong>Java</strong> backend development. I build scalable, efficient, and maintainable systems that solve real-world problems in fintech and productivity domains.</p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Projects Built</div>
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi there, I'm <span class="text-blue-500">Timi</span> 👋</h1>
+                    <h2 class="text-2xl md:text-3xl mb-4">Full-Stack Software Engineer</h2>
+                    <p class="text-lg mb-6">Specializing in <strong>React</strong> frontend and <strong>Java</strong> backend development. I build scalable, efficient, and maintainable systems that solve real-world problems in fintech and productivity domains.</p>
+                    <div class="flex gap-4 mb-6">
+                        <div>
+                            <div class="text-2xl font-bold">15+</div>
+                            <div>Projects Built</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years Experience</div>
+                        <div>
+                            <div class="text-2xl font-bold">3+</div>
+                            <div>Years Experience</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5</div>
-                            <div class="stat-label">Tech Stacks</div>
+                        <div>
+                            <div class="text-2xl font-bold">5</div>
+                            <div>Tech Stacks</div>
                         </div>
                     </div>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary">
-                            <i class="fas fa-rocket"></i>
-                            View My Work
+                    <div class="flex gap-4">
+                        <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center gap-2">
+                            <i class="fas fa-rocket"></i> View My Work
                         </a>
-                        <a href="#contact" class="btn secondary">
-                            <i class="fas fa-coffee"></i>
-                            Let's Talk
+                        <a href="#contact" class="border border-blue-500 text-blue-500 px-6 py-3 rounded-lg hover:bg-blue-500 hover:text-white flex items-center gap-2">
+                            <i class="fas fa-coffee"></i> Let's Talk
                         </a>
                     </div>
                 </div>
-                <div class="hero-visual">
+                <div class="md:w-1/2">
                     <div class="code-window">
                         <div class="window-header">
                             <div class="window-buttons">
@@ -101,700 +148,516 @@
                     </div>
                 </div>
             </div>
-            <div class="social-icons">
-                <a href="https://github.com/timibacco" class="social-icon" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://timibacco.hashnode.dev/" class="social-icon" target="_blank" aria-label="Blog">
-                    <i class="fab fa-hashnode"></i>
-                </a>
-                <a href="mailto:abayomioluwatimilehinstephen@gmail.com" class="social-icon" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://linkedin.com/in/timi-abayomi" class="social-icon" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+            <div class="flex gap-4 mt-8 justify-center">
+                <a href="https://github.com/timibacco" class="text-2xl hover:text-blue-500" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://timibacco.hashnode.dev/" class="text-2xl hover:text-blue-500" target="_blank" aria-label="Blog"><i class="fab fa-hashnode"></i></a>
+                <a href="mailto:abayomioluwatimilehinstephen@gmail.com" class="text-2xl hover:text-blue-500" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/timi-abayomi" class="text-2xl hover:text-blue-500" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
+            <div class="text-center mt-8">
+                <div class="scroll-arrow text-2xl"><i class="fas fa-chevron-down"></i></div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="about-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user-tie"></i>
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-800 p-6 rounded-lg">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-gray-700 w-32 h-32 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user-tie text-4xl"></i>
+                            </div>
                         </div>
-                        <div class="image-border"></div>
-                    </div>
-                    <div class="about-text">
-                        <div class="about-intro">
-                            <p>I'm a <span class="highlight">Full-Stack Software Engineer</span> with expertise in React frontend and Java backend ecosystems. My passion lies in building robust, scalable systems that solve real-world problems.</p>
-                            <p>With a strong foundation in modern web technologies and enterprise frameworks like <strong>Spring Boot</strong>, <strong>Next.js</strong>, and <strong>React</strong>, I specialize in creating efficient APIs, microservices, and data-driven applications.</p>
-                            <p>I'm constantly learning and adapting to new technologies, with a particular interest in <strong>FinTech</strong>, distributed systems, cloud architecture, and AI integration.</p>
-                        </div>
-                        
-                        <div class="expertise-cards">
-                            <div class="expertise-card">
-                                <div class="card-icon">
-                                    <i class="fab fa-react"></i>
-                                </div>
-                                <h4>Frontend Development</h4>
+                        <p class="mb-4">I'm a <span class="text-blue-500">Full-Stack Software Engineer</span> with expertise in React frontend and Java backend ecosystems. My passion lies in building robust, scalable systems that solve real-world problems.</p>
+                        <p class="mb-4">With a strong foundation in modern web technologies and enterprise frameworks like <strong>Spring Boot</strong>, <strong>Next.js</strong>, and <strong>React</strong>, I specialize in creating efficient APIs, microservices, and data-driven applications.</p>
+                        <p>I'm constantly learning and adapting to new technologies, with a particular interest in <strong>FinTech</strong>, distributed systems, cloud architecture, and AI integration.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                            <div class="text-center">
+                                <i class="fab fa-react text-3xl text-blue-500 mb-2"></i>
+                                <h4 class="font-bold">Frontend Development</h4>
                                 <p>React, TypeScript, Next.js, Tailwind CSS</p>
                             </div>
-                            <div class="expertise-card">
-                                <div class="card-icon">
-                                    <i class="fas fa-server"></i>
-                                </div>
-                                <h4>Backend Development</h4>
+                            <div class="text-center">
+                                <i class="fas fa-server text-3xl text-blue-500 mb-2"></i>
+                                <h4 class="font-bold">Backend Development</h4>
                                 <p>Java, Spring Boot, Python, Django, FastAPI</p>
                             </div>
-                            <div class="expertise-card">
-                                <div class="card-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <h4>Database & Cloud</h4>
+                            <div class="text-center">
+                                <i class="fas fa-database text-3xl text-blue-500 mb-2"></i>
+                                <h4 class="font-bold">Database & Cloud</h4>
                                 <p>PostgreSQL, MongoDB, AWS, Docker, Kafka</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="github-stats-container">
-                    <h3>GitHub Activity</h3>
-                    <div class="github-stats">
-                        <img src="https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=radical&bg_color=0d1117&hide_border=true&count_private=true" alt="GitHub Stats" loading="lazy">
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=timibacco&layout=compact&theme=radical&bg_color=0d1117&hide_border=true" alt="Top Languages" loading="lazy">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">GitHub Activity</h3>
+                    <div class="space-y-4">
+                        <img src="https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=radical&bg_color=0d1117&hide_border=true&count_private=true" alt="GitHub Stats" class="w-full">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=timibacco&layout=compact&theme=radical&bg_color=0d1117&hide_border=true" alt="Top Languages" class="w-full">
                     </div>
-                    <a href="https://github.com/timibacco?tab=repositories" class="btn primary github-btn" target="_blank">
-                        <i class="fab fa-github"></i>
-                        View All Repositories
+                    <a href="https://github.com/timibacco?tab=repositories" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center gap-2 mt-4 inline-block" target="_blank">
+                        <i class="fab fa-github"></i> View All Repositories
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Tech Stack & Expertise</h2>
-            <div class="skills-content">
-                <div class="skills-grid">
-                    <!-- Frontend Technologies -->
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <h3>Frontend Development</h3>
-                        </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">React & Next.js</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="95"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">TypeScript</span>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Tailwind CSS</span>
-                                    <span class="skill-percentage">88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="88"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML5 & CSS3</span>
-                                    <span class="skill-percentage">92%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="92"></div>
-                                </div>
-                            </div>
-                        </div>
+    <section id="skills" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Tech Stack & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fab fa-react text-3xl text-blue-500"></i>
+                        <h3 class="text-xl font-bold">Frontend Development</h3>
                     </div>
-                    
-                    <!-- Backend Technologies -->
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fab fa-java"></i>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React & Next.js</span>
+                                <span>95%</span>
                             </div>
-                            <h3>Backend Development</h3>
+                            <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
                         </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Java & Spring Boot</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="95"></div>
-                                </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>TypeScript</span>
+                                <span>90%</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Spring Cloud</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Python & Django</span>
-                                    <span class="skill-percentage">88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="88"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">FastAPI & Flask</span>
-                                    <span class="skill-percentage">80%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="80"></div>
-                                </div>
-                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
                         </div>
-                    </div>
-                    
-                    <!-- Database & DevOps -->
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <div class="category-icon">
-                                <i class="fas fa-database"></i>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Tailwind CSS</span>
+                                <span>88%</span>
                             </div>
-                            <h3>Database & DevOps</h3>
+                            <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
                         </div>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">PostgreSQL</span>
-                                    <span class="skill-percentage">88%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="88"></div>
-                                </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>HTML5 & CSS3</span>
+                                <span>92%</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">MongoDB</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="85"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Docker & AWS</span>
-                                    <span class="skill-percentage">78%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="78"></div>
-                                </div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Redis & Kafka</span>
-                                    <span class="skill-percentage">82%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" data-level="82"></div>
-                                </div>
-                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 92%"></div></div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Technology Icons -->
-                <div class="tech-showcase">
-                    <h3>Technologies I Work With</h3>
-                    <div class="tech-icons">
-                        <div class="tech-icon" data-tech="React">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fab fa-java text-3xl text-blue-500"></i>
+                        <h3 class="text-xl font-bold">Backend Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Java & Spring Boot</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
                         </div>
-                        <div class="tech-icon" data-tech="Java">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Spring Cloud</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
                         </div>
-                        <div class="tech-icon" data-tech="Python">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python & Django</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
                         </div>
-                        <div class="tech-icon" data-tech="Node.js">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="tech-icon" data-tech="Docker">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="tech-icon" data-tech="AWS">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="tech-icon" data-tech="Database">
-                            <i class="fas fa-database"></i>
-                            <span>Database</span>
-                        </div>
-                        <div class="tech-icon" data-tech="Git">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>FastAPI & Flask</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fas fa-database text-3xl text-blue-500"></i>
+                        <h3 class="text-xl font-bold">Database & DevOps</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>PostgreSQL</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 88%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MongoDB</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Docker & AWS</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 78%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Redis & Kafka</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-level" style="width: 82%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-center mb-4">Technologies I Work With</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="flex flex-col items-center"><i class="fab fa-react text-3xl text-blue-500 mb-2"></i><span>React</span></div>
+                    <div class="flex flex-col items-center"><i class="fab fa-java text-3xl text-blue-500 mb-2"></i><span>Java</span></div>
+                    <div class="flex flex-col items-center"><i class="fab fa-python text-3xl text-blue-500 mb-2"></i><span>Python</span></div>
+                    <div class="flex flex-col items-center"><i class="fab fa-node-js text-3xl text-blue-500 mb-2"></i><span>Node.js</span></div>
+                    <div class="flex flex-col items-center"><i class="fab fa-docker text-3xl text-blue-500 mb-2"></i><span>Docker</span></div>
+                    <div class="flex flex-col items-center"><i class="fab fa-aws text-3xl text-blue-500 mb-2"></i><span>AWS</span></div>
+                    <div class="flex flex-col items-center"><i class="fas fa-database text-3xl text-blue-500 mb-2"></i><span>Database</span></div>
+                    <div class="flex flex-col items-center"><i class="fab fa-git-alt text-3xl text-blue-500 mb-2"></i><span>Git</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects" >
-        <div class="container ">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-showcase">
-                               
-                
-                        <div class="projects-grid">
-                        
-                                <!-- WealthAlgo - FinTech Trading Platform -->
-                            <div class="project-card featured">
-                                        <div class="project-visual">
-                                            <div class="project-carousel">
-                                                    <div class="swiper fintech-swiper">
-                                                                <div class="swiper-wrapper">
-                                                                    <div class="swiper-slide">
-                                                                        <img src="img/fintech_imgs/fintech_001.png" alt="WealthAlgo Dashboard" loading="lazy">
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <img src="img/fintech_imgs/fintech_002.png" alt="Trading Interface" loading="lazy">
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <img src="img/fintech_imgs/fintech_003.png" alt="Portfolio Analytics" loading="lazy">
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <img src="img/fintech_imgs/fintech_004.png" alt="Market Analysis" loading="lazy">
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <img src="img/fintech_imgs/fintech_005.png" alt="Risk Management" loading="lazy">
-                                                                    </div>
-                                                                </div>
-                                                            <div class="swiper-pagination"></div>
-                                                            <div class="swiper-button-next"></div>
-                                                            <div class="swiper-button-prev"></div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    
-                                
-                                    <div class="project-info">
-                                        <div class="project-header">
-                                            <div class="project-badge fintech">FinTech</div>
-                                            <h3 class="project-title">WealthAlgo - Real-Time Trading Platform</h3>
-                                            <p class="project-subtitle">AI-Powered Cryptocurrency & Stock Trading Platform</p>
-                                        </div>
-                                    
-                                    <div class="project-features">
-                                        <h4>Key Features:</h4>
-                                        <ul>
-                                            <li><i class="fas fa-chart-line"></i> Real-time market data integration (Alpaca, Tiingo APIs)</li>
-                                            <li><i class="fas fa-robot"></i> ML-powered trading algorithms and risk management</li>
-                                            <li><i class="fas fa-shield-alt"></i> Secure payment processing and portfolio management</li>
-                                            <li><i class="fas fa-stream"></i> Event-driven architecture with Apache Kafka</li>
-                                            <li><i class="fas fa-newspaper"></i> News sentiment analysis for market predictions</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="project-tags">
-                                        <div class="tech-tag java">Java</div>
-                                        <div class="tech-tag spring">Spring Boot</div>
-                                        <div class="tech-tag kafka">Apache Kafka</div>
-                                        <div class="tech-tag ml">Machine Learning</div>
-                                        <div class="tech-tag api">REST APIs</div>
-                                        <div class="tech-tag microservices">Microservices</div>
-                                    </div>
-                                    
-                                    <div class="project-links">
-                                        <a href="https://github.com/timibacco/algocoin" class="btn primary" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                        <a href="https://github.com/timibacco/algocoin" class="btn secondary" target="_blank">
-                                            <i class="fas fa-external-link-alt"></i> Live Demo
-                                        </a>
-                                    </div>
-                                </div>
-                              </div>
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="carousel mb-4">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="img/fintech_imgs/fintech_001.png" alt="WealthAlgo Dashboard" class="w-full">
                             </div>
-
-                            <!-- ProductifiSync - AI Study Management -->
-                            <div class="project-card featured">
-                                
-                                
-
-
-                                <div class="project-visual">
-                                <div class="project-carousel">
-                                    <div class="swiper aitech-swiper">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="img/ai_tech_imgs/aitech_index.png" alt="ProductifiSync Dashboard" loading="lazy">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="img/ai_tech_imgs/aitech_001.png" alt="AI Study Planner" loading="lazy">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="img/ai_tech_imgs/aitech_002.png" alt="Task Management" loading="lazy">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="img/ai_tech_imgs/aitech_003.png" alt="Analytics Dashboard" loading="lazy">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="img/ai_tech_imgs/aitech_004.png" alt="Study Progress" loading="lazy">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-                                </div>
-                                
-                                
-                                
-                                <div class="project-info">
-
-                               
-                                    <div class="project-header">
-                                        <div class="project-badge ai">AI & Productivity</div>
-                                        <h3 class="project-title">ProductifiSync - AI Study Management</h3>
-                                        <p class="project-subtitle">Cross-Platform AI-Powered Productivity & Study Management App</p>
-                                    </div>
-                                    <div class="project-features">
-                                        <h4>Key Features:</h4>
-                                        <ul>
-                                            <li><i class="fas fa-brain"></i> AI-powered study plan generation with Gemini API</li>
-                                            <li><i class="fas fa-mobile-alt"></i> Cross-platform mobile app (iOS & Android)</li>
-                                            <li><i class="fas fa-upload"></i> Smart document upload with OCR and content analysis</li>
-                                            <li><i class="fas fa-chart-pie"></i> Advanced analytics and progress tracking</li>
-                                            <li><i class="fas fa-calendar-alt"></i> Intelligent scheduling and deadline management</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="project-tags">
-                                        <div class="tech-tag react">React</div>
-                                        <div class="tech-tag typescript">TypeScript</div>
-                                        <div class="tech-tag tailwind">Tailwind CSS</div>
-                                        <div class="tech-tag capacitor">Capacitor</div>
-                                        <div class="tech-tag ai">Google Gemini AI</div>
-                                        <div class="tech-tag mobile">Mobile First</div>
-                                    </div>
-                                    
-                                    <div class="project-links">
-                                        <a href="https://github.com/timibacco/productivisync" class="btn primary" target="_blank">
-                                            <i class="fab fa-github"></i> View Code
-                                        </a>
-                                        <a href="https://github.com/timibacco/productivisync" class="btn secondary" target="_blank">
-                                            <i class="fas fa-external-link-alt"></i> Live Demo
-                                        </a>
-                                    </div>
-                                </div>
-                                </div>
-                                
-                        </div>
-
-                <!-- Other Projects Grid -->
-                <div class="other-projects">
-                    <h3 class="projects-subtitle">Other Notable Projects</h3>
-                    <div class="projects-grid">
-                        
-                        <!-- Java Compiler -->
-                        <div class="project-card featured">
-                            <div class="project-visual">
-                                <div class="project-icon compiler">
-                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="10" y="15" width="80" height="70" rx="5" fill="#e74c3c" opacity="0.1"/>
-                                        <rect x="15" y="20" width="70" height="5" fill="#e74c3c"/>
-                                        <rect x="15" y="30" width="50" height="3" fill="#34495e"/>
-                                        <rect x="15" y="37" width="45" height="3" fill="#34495e"/>
-                                        <rect x="15" y="44" width="60" height="3" fill="#34495e"/>
-                                        <rect x="15" y="51" width="35" height="3" fill="#34495e"/>
-                                        <rect x="15" y="58" width="55" height="3" fill="#34495e"/>
-                                        <polygon points="75,35 85,40 75,45" fill="#27ae60"/>
-                                    </svg>
-                                </div>
+                            <div class="carousel-item">
+                                <img src="img/fintech_imgs/fintech_002.png" alt="Trading Interface" class="w-full">
                             </div>
-                            <div class="project-info">
-                                <h4>Java Compiler Implementation</h4>
-                                <p>A complete Java compiler built from scratch that generates intermediate code. Implements lexical analysis, parsing, and code generation phases.</p>
-                                <div class="project-tags">
-                                    <span class="tag java">Java</span>
-                                    <span class="tag">Compiler Design</span>
-                                    <span class="tag">IntelliJ IDEA</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="https://github.com/timibacco/mycompiler" class="btn small primary" target="_blank">
-                                        <i class="fab fa-github"></i> View Code
-                                    </a>
-                                </div>
+                            <div class="carousel-item">
+                                <img src="img/fintech_imgs/fintech_003.png" alt="Portfolio Analytics" class="w-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/fintech_imgs/fintech_004.png" alt="Market Analysis" class="w-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/fintech_imgs/fintech_005.png" alt="Risk Management" class="w-full">
                             </div>
                         </div>
-
-                        <!-- Workspace Rental App -->
-                        <div class="project-card">
-                            <div class="project-visual">
-                                <div class="project-icon workspace">
-                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="10" y="20" width="80" height="60" rx="5" fill="#3498db" opacity="0.1"/>
-                                        <rect x="15" y="25" width="70" height="8" fill="#3498db"/>
-                                        <rect x="20" y="40" width="25" height="15" fill="#e67e22" opacity="0.3"/>
-                                        <rect x="55" y="40" width="25" height="15" fill="#e67e22" opacity="0.3"/>
-                                        <rect x="20" y="60" width="60" height="3" fill="#34495e"/>
-                                        <circle cx="25" cy="45" r="2" fill="#e67e22"/>
-                                        <circle cx="75" cy="45" r="2" fill="#e67e22"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h4>Workspace Rental & E-commerce Platform</h4>
-                                <p>Hybrid application for workspace rentals and gadget sales with secure payment integration and user management system.</p>
-                                <div class="project-tags">
-                                    <span class="tag python">Django</span>
-                                    <span class="tag">PostgreSQL</span>
-                                    <span class="tag">Payment Gateway</span>
-                                </div>
-                                <div class="project-actions">
-                                    <span class="btn small disabled">
-                                        <i class="fas fa-lock"></i> Private Project
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- High-Performance API -->
-                        <div class="project-card">
-                            <div class="project-visual">
-                                <div class="project-icon api">
-                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="25" cy="30" r="8" fill="#9b59b6" opacity="0.3"/>
-                                        <circle cx="75" cy="30" r="8" fill="#9b59b6" opacity="0.3"/>
-                                        <circle cx="25" cy="70" r="8" fill="#9b59b6" opacity="0.3"/>
-                                        <circle cx="75" cy="70" r="8" fill="#9b59b6" opacity="0.3"/>
-                                        <circle cx="50" cy="50" r="12" fill="#9b59b6"/>
-                                        <line x1="33" y1="30" x2="42" y2="45" stroke="#9b59b6" stroke-width="2"/>
-                                        <line x1="67" y1="30" x2="58" y2="45" stroke="#9b59b6" stroke-width="2"/>
-                                        <line x1="33" y1="70" x2="42" y2="55" stroke="#9b59b6" stroke-width="2"/>
-                                        <line x1="67" y1="70" x2="58" y2="55" stroke="#9b59b6" stroke-width="2"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h4>High-Performance REST API</h4>
-                                <p>Low-latency RESTful API designed for real-time analytics with async processing and advanced caching strategies.</p>
-                                <div class="project-tags">
-                                    <span class="tag python">FastAPI</span>
-                                    <span class="tag">Redis</span>
-                                    <span class="tag">PostgreSQL</span>
-                                    <span class="tag">Async</span>
-                                </div>
-                                <div class="project-actions">
-                                    <span class="btn small disabled">
-                                        <i class="fas fa-lock"></i> Private Project
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+                    <div class="bg-blue-500 text-white px-2 py-1 rounded inline-block mb-2">FinTech</div>
+                    <h3 class="text-xl font-bold">WealthAlgo - Real-Time Trading Platform</h3>
+                    <p class="text-gray-300 mb-4">AI-Powered Cryptocurrency & Stock Trading Platform</p>
+                    <h4 class="font-bold mb-2">Key Features:</h4>
+                    <ul class="list-disc list-inside mb-4">
+                        <li>Real-time market data integration (Alpaca, Tiingo APIs)</li>
+                        <li>ML-powered trading algorithms and risk management</li>
+                        <li>Secure payment processing and portfolio management</li>
+                        <li>Event-driven architecture with Apache Kafka</li>
+                        <li>News sentiment analysis for market predictions</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-2 py-1 rounded">Java</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Spring Boot</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Apache Kafka</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Machine Learning</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">REST APIs</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Microservices</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/timibacco/algocoin" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center gap-2" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://github.com/timibacco/algocoin" class="border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-500 hover:text-white flex items-center gap-2" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="carousel mb-4">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="img/ai_tech_imgs/aitech_index.png" alt="ProductifiSync Dashboard" class="w-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ai_tech_imgs/aitech_001.png" alt="AI Study Planner" class="w-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ai_tech_imgs/aitech_002.png" alt="Task Management" class="w-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ai_tech_imgs/aitech_003.png" alt="Analytics Dashboard" class="w-full">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/ai_tech_imgs/aitech_004.png" alt="Study Progress" class="w-full">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-500 text-white px-2 py-1 rounded inline-block mb-2">AI & Productivity</div>
+                    <h3 class="text-xl font-bold">ProductifiSync - AI Study Management</h3>
+                    <p class="text-gray-300 mb-4">Cross-Platform AI-Powered Productivity & Study Management App</p>
+                    <h4 class="font-bold mb-2">Key Features:</h4>
+                    <ul class="list-disc list-inside mb-4">
+                        <li>AI-powered study plan generation with Gemini API</li>
+                        <li>Cross-platform mobile app (iOS & Android)</li>
+                        <li>Smart document upload with OCR and content analysis</li>
+                        <li>Advanced analytics and progress tracking</li>
+                        <li>Intelligent scheduling and deadline management</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-2 py-1 rounded">React</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">TypeScript</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Tailwind CSS</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Capacitor</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Google Gemini AI</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Mobile First</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/timibacco/productivisync" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center gap-2" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="https://github.com/timibacco/productivisync" class="border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-500 hover:text-white flex items-center gap-2" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-center mt-12 mb-4">Other Notable Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg viewBox="0 0 100 100" class="w-full h-40" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="15" width="80" height="70" rx="5" fill="#e74c3c" opacity="0.1"/>
+                            <rect x="15" y="20" width="70" height="5" fill="#e74c3c"/>
+                            <rect x="15" y="30" width="50" height="3" fill="#34495e"/>
+                            <rect x="15" y="37" width="45" height="3" fill="#34495e"/>
+                            <rect x="15" y="44" width="60" height="3" fill="#34495e"/>
+                            <rect x="15" y="51" width="35" height="3" fill="#34495e"/>
+                            <rect x="15" y="58" width="55" height="3" fill="#34495e"/>
+                            <polygon points="75,35 85,40 75,45" fill="#27ae60"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold">Java Compiler Implementation</h4>
+                    <p class="text-gray-300 mb-4">A complete Java compiler built from scratch that generates intermediate code. Implements lexical analysis, parsing, and code generation phases.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-2 py-1 rounded">Java</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Compiler Design</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">IntelliJ IDEA</span>
+                    </div>
+                    <a href="https://github.com/timibacco/mycompiler" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center gap-2" target="_blank">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg viewBox="0 0 100 100" class="w-full h-40" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" rx="5" fill="#3498db" opacity="0.1"/>
+                            <rect x="15" y="25" width="70" height="8" fill="#3498db"/>
+                            <rect x="20" y="40" width="25" height="15" fill="#e67e22" opacity="0.3"/>
+                            <rect x="55" y="40" width="25" height="15" fill="#e67e22" opacity="0.3"/>
+                            <rect x="20" y="60" width="60" height="3" fill="#34495e"/>
+                            <circle cx="25" cy="45" r="2" fill="#e67e22"/>
+                            <circle cx="75" cy="45" r="2" fill="#e67e22"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold">Workspace Rental & E-commerce Platform</h4>
+                    <p class="text-gray-300 mb-4">Hybrid application for workspace rentals and gadget sales with secure payment integration and user management system.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-2 py-1 rounded">Django</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">PostgreSQL</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Payment Gateway</span>
+                    </div>
+                    <span class="bg-gray-600 text-white px-4 py-2 rounded flex items-center gap-2"><i class="fas fa-lock"></i> Private Project</span>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg viewBox="0 0 100 100" class="w-full h-40" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="30" r="8" fill="#9b59b6" opacity="0.3"/>
+                            <circle cx="75" cy="30" r="8" fill="#9b59b6" opacity="0.3"/>
+                            <circle cx="25" cy="70" r="8" fill="#9b59b6" opacity="0.3"/>
+                            <circle cx="75" cy="70" r="8" fill="#9b59b6" opacity="0.3"/>
+                            <circle cx="50" cy="50" r="12" fill="#9b59b6"/>
+                            <line x1="33" y1="30" x2="42" y2="45" stroke="#9b59b6" stroke-width="2"/>
+                            <line x1="67" y1="30" x2="58" y2="45" stroke="#9b59b6" stroke-width="2"/>
+                            <line x1="33" y1="70" x2="42" y2="55" stroke="#9b59b6" stroke-width="2"/>
+                            <line x1="67" y1="70" x2="58" y2="55" stroke="#9b59b6" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold">High-Performance REST API</h4>
+                    <p class="text-gray-300 mb-4">Low-latency RESTful API designed for real-time analytics with async processing and advanced caching strategies.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-2 py-1 rounded">FastAPI</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Redis</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">PostgreSQL</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded">Async</span>
+                    </div>
+                    <span class="bg-gray-600 text-white px-4 py-2 rounded flex items-center gap-2"><i class="fas fa-lock"></i> Private Project</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Build Something Amazing Together</h2>
-            <div class="contact-content">
-                <div class="contact-intro">
-                    <p>I'm always interested in hearing about new opportunities, exciting projects, and ways to collaborate. Whether you're a startup looking to build an MVP or an enterprise needing scalable solutions, let's discuss how we can work together.</p>
+    <section id="contact" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Let's Build Something Amazing Together</h2>
+            <p class="text-center mb-8">I'm always interested in hearing about new opportunities, exciting projects, and ways to collaborate. Whether you're a startup looking to build an MVP or an enterprise needing scalable solutions, let's discuss how we can work together.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-envelope text-2xl text-blue-500"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p><a href="mailto:abayomioluwatimilehinstephen@gmail.com">abayomioluwatimilehinstephen@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-github text-2xl text-blue-500"></i>
+                            <div>
+                                <h4 class="font-bold">GitHub</h4>
+                                <p><a href="https://github.com/timibacco" target="_blank">github.com/timibacco</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-hashnode text-2xl text-blue-500"></i>
+                            <div>
+                                <h4 class="font-bold">Blog</h4>
+                                <p><a href="https://timibacco.hashnode.dev/" target="_blank">timibacco.hashnode.dev</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fab fa-linkedin-in text-2xl text-blue-500"></i>
+                            <div>
+                                <h4 class="font-bold">LinkedIn</h4>
+                                <p><a href="https://linkedin.com/in/timi-abayomi" target="_blank">linkedin.com/in/timi-abayomi</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 mt-4">
+                        <div class="status-indicator available"></div>
+                        <span>Available for new opportunities</span>
+                    </div>
                 </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Get In Touch</h3>
-                        <div class="contact-methods">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:abayomioluwatimilehinstephen@gmail.com">abayomioluwatimilehinstephen@gmail.com</a></p>
-                                </div>
+                <div>
+                    <div id="contact-form" hx-post="/submit-contact" hx-target="#form-message" hx-swap="innerHTML">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="name" class="block mb-1">Name *</label>
+                                <input type="text" id="name" name="name" class="w-full p-2 rounded bg-gray-700 text-white" required>
                             </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>GitHub</h4>
-                                    <p><a href="https://github.com/timibacco" target="_blank">github.com/timibacco</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fab fa-hashnode"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Blog</h4>
-                                    <p><a href="https://timibacco.hashnode.dev/" target="_blank">timibacco.hashnode.dev</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>LinkedIn</h4>
-                                    <p><a href="https://linkedin.com/in/timi-abayomi" target="_blank">linkedin.com/in/timi-abayomi</a></p>
-                                </div>
+                            <div>
+                                <label for="email" class="block mb-1">Email *</label>
+                                <input type="email" id="email" name="email" class="w-full p-2 rounded bg-gray-700 text-white" required>
                             </div>
                         </div>
-                        
-                        <div class="availability-status">
-                            <div class="status-indicator available"></div>
-                            <span>Available for new opportunities</span>
+                        <div class="mb-4">
+                            <label for="company" class="block mb-1">Company</label>
+                            <input type="text" id="company" name="company" class="w-full p-2 rounded bg-gray-700 text-white">
                         </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block mb-1">Subject *</label>
+                            <select id="subject" name="subject" class="w-full p-2 rounded bg-gray-700 text-white" required>
+                                <option value="">Select a topic</option>
+                                <option value="freelance">Freelance Project</option>
+                                <option value="fulltime">Full-time Opportunity</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-1">Message *</label>
+                            <textarea id="message" name="message" rows="6" class="w-full p-2 rounded bg-gray-700 text-white" required placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 flex items-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
                     </div>
-                    
-                    <div class="contact-form-container">
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Name *</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject *</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a topic</option>
-                                    <option value="freelance">Freelance Project</option>
-                                    <option value="fulltime">Full-time Opportunity</option>
-                                    <option value="collaboration">Collaboration</option>
-                                    <option value="consultation">Consultation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or opportunity..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn primary submit-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
-                        </form>
-                        <div id="formMessage" class="form-message"></div>
-                    </div>
+                    <div id="form-message" class="mt-4"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <i class="fas fa-code"></i>
-                        <span>Timi Abayomi</span>
+    <footer class="py-8 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fas fa-code text-blue-500"></i>
+                        <span class="text-xl font-bold">Timi Abayomi</span>
                     </div>
-                    <p>Full-Stack Software Engineer specializing in React frontend and Java backend development.</p>
-                    <div class="footer-social">
-                        <a href="https://github.com/timibacco" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://timibacco.hashnode.dev/" target="_blank" aria-label="Blog">
-                            <i class="fab fa-hashnode"></i>
-                        </a>
-                        <a href="mailto:abayomioluwatimilehinstephen@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/timi-abayomi" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                    <p class="mb-4">Full-Stack Software Engineer specializing in React frontend and Java backend development.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/timibacco" class="text-2xl hover:text-blue-500" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://timibacco.hashnode.dev/" class="text-2xl hover:text-blue-500" target="_blank" aria-label="Blog"><i class="fab fa-hashnode"></i></a>
+                        <a href="mailto:abayomioluwatimilehinstephen@gmail.com" class="text-2xl hover:text-blue-500" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/timi-abayomi" class="text-2xl hover:text-blue-500" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="https://timibacco.hashnode.dev/" target="_blank">Blog</a></li>
-                            <li><a href="https://github.com/timibacco" target="_blank">GitHub</a></li>
-                            <li><a href="https://timibacco.github.io/papers/Algorithmic Trading Deconstructed _ Linguistic Redundancy and Technical Nuance in Modern Finance.pdf" target="_blank">Latest Paper</a></li>
-                        </ul>
-                    </div>
+                <div>
+                    <h4 class="font-bold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+                        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+                        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://timibacco.hashnode.dev/" class="hover:text-blue-500" target="_blank">Blog</a></li>
+                        <li><a href="https://github.com/timibacco" class="hover:text-blue-500" target="_blank">GitHub</a></li>
+                        <li><a href="https://timibacco.github.io/papers/Algorithmic Trading Deconstructed _ Linguistic Redundancy and Technical Nuance in Modern Finance.pdf" class="hover:text-blue-500" target="_blank">Latest Paper</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Timi Abayomi. All Rights Reserved.</p>
-                <p>✨ Let's build something amazing together! ✨</p>
+            <div class="text-center mt-8">
+                <p>© 2025 Timi Abayomi. All Rights Reserved.</p>
+                <p class="mt-2">✨ Let's build something amazing together! ✨</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+    <script>
+        // Simulate mobile nav response
+        htmx.on('htmx:configRequest', (evt) => {
+            if (evt.detail.path === '/nav-menu') {
+                evt.detail.xhr.onload = function() {
+                    this.responseText = `
+                        <div id="mobile-nav" class="md:hidden bg-gray-800 p-4 absolute top-16 left-0 w-full">
+                            <a href="#home" class="block py-2 hover:text-blue-500 flex items-center gap-2"><i class="fas fa-home"></i> Home</a>
+                            <a href="#about" class="block py-2 hover:text-blue-500 flex items-center gap-2"><i class="fas fa-user"></i> About</a>
+                            <a href="#skills" class="block py-2 hover:text-blue-500 flex items-center gap-2"><i class="fas fa-cogs"></i> Skills</a>
+                            <a href="#projects" class="block py-2 hover:text-blue-500 flex items-center gap-2"><i class="fas fa-laptop-code"></i> Projects</a>
+                            <a href="#contact" class="block py-2 hover:text-blue-500 flex items-center gap-2"><i class="fas fa-envelope"></i> Contact</a>
+                            <a href="https://timibacco.github.io/papers/Algorithmic Trading Deconstructed _ Linguistic Redundancy and Technical Nuance in Modern Finance.pdf" 
+                               target="_blank" class="block py-2 hover:text-blue-500 flex items-center gap-2"><i class="fas fa-file-pdf"></i> Latest Paper</a>
+                        </div>`;
+                };
+            }
+            if (evt.detail.path === '/submit-contact') {
+                evt.detail.xhr.onload = function() {
+                    this.responseText = '<p class="text-green-500">Message sent successfully! I\'ll get back to you soon.</p>';
+                };
+            }
+        });
+    </script>
