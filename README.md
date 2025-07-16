@@ -1,118 +1,80 @@
+# Timi Bacco - Full-Stack Software Engineer
 
+<div align="center">
+  <a href="https://www.linkedin.com/in/timilehin-abayomi/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://timibacco.hashnode.dev/">
+    <img src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white" alt="Hashnode Badge"/>
+  </a>
+</div>
 
+---
 
-
-<div id="badges" align="center">
-     <a href="https://timibacco.hashnode.dev/">
-    <img src="https://img.shields.io/badge/Hashnode-blue?style=for-the-badge&logo=hashnode&logoColor=dark" width = "150" height="30" alt="Hashnode Badge"/>
-      </a>
-    
-    
-
-
-
-
-
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=4600&pause=2500&color=FFC43D&width=435&lines=Hi+there%2C+This+is+Timi+%F0%9F%91%8B" alt="Typing SVG" /></a>
-
-![Timi's GitHub stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commit=trues)
-
-
-  
-
-
-
-
-# 🚀 Backend Developer Portfolio
-
-Hi! I'm a **Backend Engineer** with expertise in **Java** and **Python** ecosystems. I build scalable, efficient, and maintainable backend systems using industry-standard frameworks and tools.
+Hi! I'm Timi, a **Full-Stack Software Engineer** specializing in building scalable, efficient, and maintainable systems. My expertise spans from creating intuitive user interfaces with **React** to developing robust backend services with **Java** and **Python**. I am passionate about solving real-world problems, particularly in the fintech and productivity domains.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### **Java & Spring Framework**
-- **Spring Boot**: Microservices architecture, RESTful APIs, and robust backend systems.
-- **OpenFeignClient**: Simplified HTTP client creation for microservices.
-- Other tools: Spring Security, Spring Data JPA, etc.
+My technical skills include:
 
-### **Python Frameworks**
-- **Django**: Full-stack development with an emphasis on backend logic.
-- **FastAPI**: High-performance APIs.
-- **Flask**: Lightweight web applications.
+### **Frontend**
+- **JavaScript (ES6+)** & **TypeScript**
+- **React** & **Next.js**
+- **HTML5** & **CSS3** (including Tailwind CSS, SASS)
+- **HTMX** for modern, dynamic interfaces
 
-### **Other Skills**
-- API integration and development.
-- Database management: PostgreSQL, MySQL, MongoDB.
-- Proficient in version control (Git) and CI/CD pipelines.
-- Containerization and orchestration (Docker, Kubernetes).
+### **Backend**
+- **Java**: Spring Boot (Microservices, RESTful APIs, Spring Security, Spring Data JPA)
+- **Python**: Django, FastAPI, Flask
+- **Node.js**: Express.js
+
+### **Databases & Data**
+- **Relational**: PostgreSQL, MySQL
+- **NoSQL**: MongoDB, Redis
+- **Messaging**: Apache Kafka
+
+### **DevOps & Tools**
+- **Version Control**: Git & GitHub
+- **CI/CD**: GitHub Actions, Jenkins
+- **Containerization**: Docker, Kubernetes
+- **Cloud**: AWS, Google Cloud
 
 ---
 
-## 🌟 Highlight Projects
+## 🌟 Featured Projects
 
-### [Project 1: **MY COMPILER: A SIMPLE JAVA COMPILER**](https://github.com/timibacco/mycompiler)
-**Tech Stack**: JAVA, IntellijIDE
-**Description**: An implementation of a Java compiler, in Java, that generates intermediate code. No optimization.
+### [1. AlgoCoin: Real-Time Trading Platform](https://github.com/timibacco/algocoin)
+- **Tech Stack**: Java, Spring Boot, OpenFeign, Kafka, Machine Learning
+- **Description**: A robust brokerage and crypto trading platform featuring ML algorithms to hedge against market volatility. It provides a seamless and intelligent trading experience.
 
-### [Project 2: **Workspace Rental & Gadget Sales App**](#)
-**Tech Stack**: Django, HTML, CSS, PostgreSQL  (private)
-**Description**: A hybrid app  allowing users to rent workspaces and purchase gadgets, featuring a user-friendly interface and secure payment gateway integration.  
+### [2. MyCompiler: A Simple Java Compiler](https://github.com/timibacco/mycompiler)
+- **Tech Stack**: Java
+- **Description**: An implementation of a Java compiler that generates intermediate code. This project showcases a deep understanding of programming language fundamentals.
 
-### [Project 3: **A Real-TIme Trading Platform with ML featured=s.**](https://github.com/timibacco/algocoin)
-**Tech Stack**: Java, Spring Boot, OpenFeignClient, Kafka  
-**Description**: A robust brokage and crypto trading platform, featuring ML Algorithms to hedge against the market, fostering seamless and smooth trading experience with AI.
-
-### [Project 4: **High-performance REST API**](#)
-**Tech Stack**: FastAPI, Redis, PostgreSQL  
-**Description**: Designed and implemented a RESTful API with low latency for a real-time analytics system.
+### [3. High-Performance REST API for Analytics](https://github.com/timibacco)
+- **Tech Stack**: Python, FastAPI, Redis, PostgreSQL
+- **Description**: Designed and implemented a low-latency RESTful API for a real-time analytics system, demonstrating expertise in building high-performance backend services.
 
 ---
 
 ## 📈 GitHub Stats
 
-![timibacco's github stats](https://github-readme-stats.vercel.app/api?username=timibacco&show=&count_private=true&show_icons=true&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+<div align="center">
+
+![Timi's GitHub Stats](https://github-readme-stats.vercel.app/api?username=timibacco&show_icons=true&theme=gruvbox&rank_icon=github&count_private=true&include_all_commits=true)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=timibacco&layout=compact&theme=radical)
+
+</div>
 
 ---
 
 ## 📬 Get in Touch
 
-- **Email**: [abayomioluwatimilehinstephen@gmail.com](mailto:abayomioluwatimilehinstephen@gmail.com)  
-- **LinkedIn**: [LinkedIn](#)  
+- **Email**: [abayomioluwatimilehinstephen@gmail.com](mailto:abayomioluwatimilehinstephen@gmail.com)
+- **LinkedIn**: [Timi Abayomi](https://www.linkedin.com/in/timilehin-abayomi/)
 
 ---
 
 ### ✨ *Let’s build something amazing together!* ✨
-
-  
-  
-  
-<p align="center">
-  <a href="https://github.com/timibacco?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://custom-icon-badges.herokuapp.com/badge/-All%20Repos-FFC43D?style=for-the-badge&logoColor=white&logo=repo"/></a>
-</p>
-
-
-## Technology Stack
-
-<!-- https://github.com/tandpfun/skill-icons -->
-<div align="center">
-
-[![My Skills](https://skillicons.dev/icons?i=java,spring,python,django,fastapi,react,mysql,mongodb,postgres,docker,redis,rabbitmq,kafka,)](https://skillicons.dev)
-
-</div>
-  
-
-
-Thank you for visiting my profile!
-
-
-
-
----
-
-
-<!---
-timibacco/timibacco is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
